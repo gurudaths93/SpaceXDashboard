@@ -5,11 +5,11 @@ const path = require('path');
 const app = express();
 
 // Serve only the static files form the dist directory
-app.use(express.static(__dirname + '/dist/SpaceXDashboard'));
+app.use(express.static(__dirname + '/dist/SpaceXMissionDashboard/browser'));
 
 app.get('/*', function(req,res) {
     
-res.sendFile(path.join(__dirname+'/dist/SpaceXDash  board/index.html'));
+res.sendFile(path.join(__dirname+'/dist/SpaceXMissionDashboard/browser/index.html'));
 });
 
 // Start the app by listening on the default Heroku port
