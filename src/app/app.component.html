@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  <h3 class="heading">{{ labelData.heading }}</h3>
+  <div class="row content h-100">
+    <div class="col-2 sidenav">
+      <app-filter-info (sendFilterData)=dataFromChild($event)></app-filter-info>
+    </div>
+    <div class="col-10">
+      <div class="row launch-programs">
+        
+        <div *ngFor="let mission of missionData; index as i" class="col-3">
+          <app-mission-info [missionData]="missionData[i]"></app-mission-info>
+        </div>
+      
+      <div *ngIf ="missionData.length == 0 ? true:false">
+          <div class="no-data-found">
+            <h2>{{labelData.no_data_found_filters}}</h2>
+          </div>
+      </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-text">
+        {{labelData.developedBy}}{{labelData.developerName}}
+      </div>
+    </footer>
+  </div>
+  
+</div>
+
