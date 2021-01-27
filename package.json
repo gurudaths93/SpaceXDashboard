@@ -12,7 +12,8 @@
     "serve:ssr": "node dist/SpaceXMissionDashboard/server/main.js",
     "build:ssr": "ng build --prod && ng run SpaceXMissionDashboard:server:production",
     "prerender": "ng run SpaceXMissionDashboard:prerender",
-    "heroku-postbuild": "ng build --prod"
+    "heroku-postbuild": "ng build --prod",
+    "postinstall": "ng build --aot --prod"
   },
   "engines": {
     "node": "12.18.4",
