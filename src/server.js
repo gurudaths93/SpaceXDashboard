@@ -24,11 +24,11 @@ app.use(forceSSL());
 
 // Run the app by serving the static files
 // in the dist directory
-app.use(express.static(__dirname + '/browser/dist'));
+app.use(express.static(__dirname + '/SpaceXMissionDashboard/browser/dist'));
 // For all GET requests, send back index.html
 // so that PathLocationStrategy can be used
 app.get('/*', function(req, res) {
-    res.sendFile(path.join(__dirname + '/browser/dist/index.html'));
+    res.sendFile(path.join(__dirname + '/SpaceXMissionDashboard/browser/dist/index.html'));
   });
 // Start the app by listening on the default
 // Heroku port
